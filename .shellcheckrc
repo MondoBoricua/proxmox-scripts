@@ -1,0 +1,4 @@
+# Config de shellcheck para proxmox-scripts
+# SC2034: paletas de colores definidas completas aunque no se usen todas
+# SC2155: `local var=$(cmd)` — estilo aceptado en estos scripts interactivos
+disable=SC2034,SC2155

@@ -623,8 +623,8 @@ install_samba() {
 
     # Descargar el script de Samba al contenedor
     pct exec $CTID -- bash -c "
-        curl -sSL https://raw.githubusercontent.com/MondoBoricua/proxmox-samba/main/samba.sh -o /tmp/samba.sh ||
-        wget -O /tmp/samba.sh https://raw.githubusercontent.com/MondoBoricua/proxmox-samba/main/samba.sh
+        curl -fsSL https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/samba.sh -o /tmp/samba.sh ||
+        wget -O /tmp/samba.sh https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/samba.sh
     " 2>/dev/null || {
         show_warning "Could not download from GitHub, using local version..."
 

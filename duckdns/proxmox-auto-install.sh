@@ -435,10 +435,11 @@ show_progress() {
     local filled=$((pct / 5))
     local empty=$((20 - filled))
 
-    printf "\r${CYAN}[${NC}"
-    printf "%0.s█" $(seq 1 $filled 2>/dev/null) 2>/dev/null || printf "█%.0s" {1..$filled}
-    printf "%0.s░" $(seq 1 $empty 2>/dev/null) 2>/dev/null || printf "░%.0s" {1..$empty}
-    printf "${CYAN}]${NC} ${WHITE}%3d%%${NC} - %s" "$pct" "$task"
+    local bar="" i
+    for ((i = 0; i < filled; i++)); do bar+="█"; done
+    for ((i = 0; i < empty; i++)); do bar+="░"; done
+
+    printf "\r${CYAN}[${NC}%s${CYAN}]${NC} ${WHITE}%3d%%${NC} - %s" "$bar" "$pct" "$task"
 }
 
 echo ""

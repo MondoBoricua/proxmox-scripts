@@ -69,8 +69,10 @@ create_emergency_config() {
     
     # Backup de la configuración actual
     if [ -f /etc/nginx/nginx.conf ]; then
-        cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup.$(date +%Y%m%d_%H%M%S)
-        log_info "Backup creado: /etc/nginx/nginx.conf.backup.$(date +%Y%m%d_%H%M%S)"
+        local backup_file
+        backup_file="/etc/nginx/nginx.conf.backup.$(date +%Y%m%d_%H%M%S)"
+        cp /etc/nginx/nginx.conf "$backup_file"
+        log_info "Backup creado: $backup_file"
     fi
     
     # Crear configuración mínima

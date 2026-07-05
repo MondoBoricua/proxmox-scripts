@@ -93,14 +93,14 @@ detect_os() {
 download_samba_script() {
     print_header "Descargando Script Principal de Samba"
     
-    SCRIPT_URL="https://raw.githubusercontent.com/MondoBoricua/proxmox-samba/main/samba.sh"
+    SCRIPT_URL="https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/samba.sh"
     SCRIPT_PATH="/tmp/samba-installer.sh"
     
     print_message "Descargando desde GitHub..."
     
     # Intentar descargar con curl primero
     if command -v curl &> /dev/null; then
-        if curl -sSL "$SCRIPT_URL" -o "$SCRIPT_PATH"; then
+        if curl -fsSL "$SCRIPT_URL" -o "$SCRIPT_PATH"; then
             print_success "Script descargado exitosamente con curl"
         else
             print_warning "Error al descargar con curl, intentando con wget..."

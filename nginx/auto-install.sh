@@ -716,7 +716,7 @@ if [ "\$DISTRO" = "ubuntu" ]; then
     apt update
 elif [ "\$DISTRO" = "debian" ]; then
     # Para Debian, agregar repositorio sury.org
-    curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
+    curl -fsSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
     dpkg -i /tmp/debsuryorg-archive-keyring.deb
     echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ \$(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
     apt update

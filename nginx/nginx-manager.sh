@@ -834,9 +834,9 @@ remove_site() {
     # Eliminar configuración
     rm -f "$NGINX_SITES_AVAILABLE/$SITE"
     
-    # Eliminar archivos web
+    # Eliminar archivos web (:? evita borrar / si alguna variable llega vacía)
     if [ -d "$WEB_ROOT/$SITE" ]; then
-        rm -rf "$WEB_ROOT/$SITE"
+        rm -rf "${WEB_ROOT:?}/${SITE:?}"
     fi
     
     # Eliminar logs
@@ -946,7 +946,8 @@ view_access_logs() {
         2)
             # Mostrar sitios con logs
             echo -e "${WHITE}Sitios con logs:${NC}"
-            log_files=($(ls /var/log/nginx/*_access.log 2>/dev/null))
+            log_files=(/var/log/nginx/*_access.log)
+            [ -e "${log_files[0]}" ] || log_files=()
             if [ ${#log_files[@]} -eq 0 ]; then
                 log_warning "No hay logs de sitios específicos"
                 return 1
@@ -990,7 +991,8 @@ view_error_logs() {
         2)
             # Mostrar sitios con logs
             echo -e "${WHITE}Sitios con logs:${NC}"
-            log_files=($(ls /var/log/nginx/*_error.log 2>/dev/null))
+            log_files=(/var/log/nginx/*_error.log)
+            [ -e "${log_files[0]}" ] || log_files=()
             if [ ${#log_files[@]} -eq 0 ]; then
                 log_warning "No hay logs de errores de sitios específicos"
                 return 1

@@ -143,7 +143,7 @@ check_firewall() {
             
             # Verificar puertos específicos
             for port in 8080 8081 8082 8083 8084 8085; do
-                if [ -f "/etc/nginx/sites-enabled/site-$port" ] || ls /etc/nginx/sites-enabled/* 2>/dev/null | grep -q "$port"; then
+                if [ -f "/etc/nginx/sites-enabled/site-$port" ] || grep -rlq "listen.*$port" /etc/nginx/sites-enabled/ 2>/dev/null; then
                     if ! ufw status | grep -q "$port"; then
                         log_warning "Puerto $port no está permitido en firewall"
                         log_info "Agregando regla para puerto $port..."

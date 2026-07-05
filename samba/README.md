@@ -31,7 +31,7 @@ An automated script to create and configure Samba servers in Proxmox LXC contain
 
 ```bash
 # Step 1: Download the installer
-curl -sSL https://raw.githubusercontent.com/MondoBoricua/proxmox-samba/main/auto-install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/auto-install.sh | bash
 
 # Step 2: Run the installer (copy and paste the command that appears)
 bash /tmp/proxmox-auto-install.sh
@@ -43,7 +43,7 @@ bash /tmp/proxmox-auto-install.sh
 
 ```bash
 # From Proxmox host (SSH or console)
-wget https://raw.githubusercontent.com/MondoBoricua/proxmox-samba/main/proxmox-auto-install.sh
+wget https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/proxmox-auto-install.sh
 chmod +x proxmox-auto-install.sh
 ./proxmox-auto-install.sh
 ```
@@ -86,14 +86,14 @@ pct enter [CONTAINER_ID]
 
 ```bash
 # One-line installation
-curl -sSL https://raw.githubusercontent.com/MondoBoricua/proxmox-samba/main/install.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/install.sh | sudo bash
 ```
 
 ##### 3. Installation (Manual Method)
 
 ```bash
 # Download the script
-wget https://raw.githubusercontent.com/MondoBoricua/proxmox-samba/main/samba.sh
+wget https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/samba.sh
 
 # Make it executable
 chmod +x samba.sh
@@ -361,7 +361,7 @@ Un script automatizado para crear y configurar servidores Samba en contenedores 
 
 ```bash
 # Paso 1: Descargar el instalador
-curl -sSL https://raw.githubusercontent.com/MondoBoricua/proxmox-samba/main/auto-install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/auto-install.sh | bash
 
 # Paso 2: Ejecutar el instalador (copia y pega el comando que aparece)
 bash /tmp/proxmox-auto-install.sh
@@ -373,7 +373,7 @@ bash /tmp/proxmox-auto-install.sh
 
 ```bash
 # Desde el host Proxmox (SSH o consola)
-wget https://raw.githubusercontent.com/MondoBoricua/proxmox-samba/main/proxmox-auto-install.sh
+wget https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/proxmox-auto-install.sh
 chmod +x proxmox-auto-install.sh
 ./proxmox-auto-install.sh
 ```
@@ -416,14 +416,14 @@ pct enter [ID_DEL_CONTENEDOR]
 
 ```bash
 # Instalacion en una sola linea
-curl -sSL https://raw.githubusercontent.com/MondoBoricua/proxmox-samba/main/install.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/install.sh | sudo bash
 ```
 
 ##### 3. Instalacion (Metodo Manual)
 
 ```bash
 # Descargar el script
-wget https://raw.githubusercontent.com/MondoBoricua/proxmox-samba/main/samba.sh
+wget https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/samba.sh
 
 # Darle permisos de ejecucion
 chmod +x samba.sh

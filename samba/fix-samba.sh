@@ -97,7 +97,7 @@ fix_config() {
     
     # Backup de configuración existente
     if [ -f /etc/samba/smb.conf ]; then
-        cp /etc/samba/smb.conf /etc/samba/smb.conf.backup.$(date +%Y%m%d_%H%M%S)
+        cp /etc/samba/smb.conf "/etc/samba/smb.conf.backup.$(date +%Y%m%d_%H%M%S)"
     fi
     
     # Crear configuración básica

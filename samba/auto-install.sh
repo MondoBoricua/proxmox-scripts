@@ -13,7 +13,7 @@ PURPLE='\033[0;35m'
 NC='\033[0m' # No Color
 
 # URL del instalador principal
-INSTALLER_URL="https://raw.githubusercontent.com/MondoBoricua/proxmox-samba/main/proxmox-auto-install.sh"
+INSTALLER_URL="https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/proxmox-auto-install.sh"
 INSTALLER_PATH="/tmp/proxmox-auto-install.sh"
 
 print_message() {
@@ -44,7 +44,7 @@ main() {
     
     # Intentar descargar con curl primero
     if command -v curl &> /dev/null; then
-        if curl -sSL "$INSTALLER_URL" -o "$INSTALLER_PATH"; then
+        if curl -fsSL "$INSTALLER_URL" -o "$INSTALLER_PATH"; then
             print_success "Instalador descargado exitosamente con curl"
         else
             download_with_wget

@@ -31,7 +31,7 @@ Un script automatizado para crear y configurar servidores web **Nginx + PHP** en
 
 ```bash
 # Ejecutar desde el HOST Proxmox (no desde un contenedor)
-bash -c "$(wget -qO- https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/auto-install.sh)"
+bash -c "$(wget -qO- https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/nginx/auto-install.sh)"
 ```
 
 ### Método 2: Instalación Manual
@@ -54,7 +54,7 @@ chmod +x auto-install.sh
 
 ```bash
 # Ejecutar DENTRO del contenedor existente
-bash -c "$(wget -qO- https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/update.sh)"
+bash -c "$(wget -qO- https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/nginx/update.sh)"
 ```
 
 El script de actualización te permite:

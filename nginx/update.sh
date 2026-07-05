@@ -151,7 +151,7 @@ install_php() {
     elif [ "$DISTRO" = "debian" ]; then
         show_info "Agregando repositorio sury.org..."
         apt install -y apt-transport-https lsb-release ca-certificates curl
-        curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
+        curl -fsSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
         dpkg -i /tmp/debsuryorg-archive-keyring.deb
         echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
         apt update
@@ -222,7 +222,7 @@ install_php() {
 
 configure_nginx_php() {
     # Detectar version de PHP instalada
-    PHP_INSTALLED=$(ls /var/run/php/ 2>/dev/null | grep -oP 'php\K[0-9]+\.[0-9]+' | head -1)
+    PHP_INSTALLED=$(find /var/run/php/ -maxdepth 1 -name 'php*' -printf '%f\n' 2>/dev/null | grep -oP 'php\K[0-9]+\.[0-9]+' | head -1)
 
     if [ -z "$PHP_INSTALLED" ]; then
         show_warning "PHP-FPM no detectado, saltando configuracion de Nginx"

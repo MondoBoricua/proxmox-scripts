@@ -74,32 +74,34 @@ create_tools_directory() {
 }
 
 # Descargar herramientas desde GitHub
+BASE_URL="https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/nginx"
+
 download_tools() {
     log_step "Descargando herramientas desde GitHub..."
-    
-    cd /opt/nginx-server
-    
+
+    cd /opt/nginx-server || { log_error "No se pudo acceder a /opt/nginx-server"; exit 1; }
+
     # Descargar scripts principales
-    wget -O nginx-manager.sh https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/nginx-manager.sh
-    wget -O ssl-manager.sh https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/ssl-manager.sh
-    wget -O welcome.sh https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/welcome.sh
-    wget -O backup-config.sh https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/backup-config.sh
-    
+    wget -O nginx-manager.sh "$BASE_URL/nginx-manager.sh"
+    wget -O ssl-manager.sh "$BASE_URL/ssl-manager.sh"
+    wget -O welcome.sh "$BASE_URL/welcome.sh"
+    wget -O backup-config.sh "$BASE_URL/backup-config.sh"
+
     # Descargar configuraciones
-    wget -O configs/nginx.conf https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/configs/nginx.conf
-    wget -O configs/default-site.conf https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/configs/default-site.conf
-    wget -O configs/ssl-template.conf https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/configs/ssl-template.conf
-    
+    wget -O configs/nginx.conf "$BASE_URL/configs/nginx.conf"
+    wget -O configs/default-site.conf "$BASE_URL/configs/default-site.conf"
+    wget -O configs/ssl-template.conf "$BASE_URL/configs/ssl-template.conf"
+
     # Descargar sitio de ejemplo
-    wget -O sites/default/index.html https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/sites/default/index.html
+    wget -O sites/default/index.html "$BASE_URL/sites/default/index.html"
     mkdir -p sites/default/css sites/default/js
-    wget -O sites/default/css/style.css https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/sites/default/css/style.css
-    wget -O sites/default/js/main.js https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/sites/default/js/main.js
-    
+    wget -O sites/default/css/style.css "$BASE_URL/sites/default/css/style.css"
+    wget -O sites/default/js/main.js "$BASE_URL/sites/default/js/main.js"
+
     # Descargar utilidades
-    wget -O utils/security.sh https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/utils/security.sh
-    wget -O utils/monitoring.sh https://raw.githubusercontent.com/MondoBoricua/nginx-server/master/utils/monitoring.sh
-    
+    wget -O utils/security.sh "$BASE_URL/utils/security.sh"
+    wget -O utils/monitoring.sh "$BASE_URL/utils/monitoring.sh"
+
     log_success "Herramientas descargadas"
 }
 
