@@ -6,6 +6,10 @@
   <a href="https://www.patreon.com/MT3K"><img alt="Patreon" src="https://img.shields.io/badge/Patreon-Support_MT3K-FF424D?style=for-the-badge&logo=patreon"></a>
 </p>
 
+<p align="center">
+  <img src="img/proxmox-scripts-hero.png" alt="Proxmox Scripts — one-command LXC installers: duckdns (dynamic DNS), samba (file sharing), nginx (web server + PHP)" width="720" />
+</p>
+
 One-command LXC installers for your Proxmox homelab — run a single line on the Proxmox host and get a fully configured container. Battle-tested on my own homelab. / Instaladores LXC de un solo comando para tu homelab Proxmox.
 
 > This repo consolidates my former `proxmox-duckdns`, `proxmox-samba` and `nginx-server` repos — old links redirect or keep working via compatibility stubs.
