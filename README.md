@@ -1,5 +1,12 @@
 # 🌐 Nginx + PHP Web Server para Proxmox LXC
 
+<p>
+  <img alt="Proxmox" src="https://img.shields.io/badge/Proxmox-VE_8.x_%2F_9.x-E57000?style=for-the-badge&logo=proxmox&logoColor=white">
+  <img alt="License" src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
+  <a href="https://www.patreon.com/MT3K"><img alt="Patreon" src="https://img.shields.io/badge/Patreon-Support_MT3K-FF424D?style=for-the-badge&logo=patreon"></a>
+</p>
+
+
 Un script automatizado para crear y configurar servidores web **Nginx + PHP** en contenedores LXC de Proxmox, perfecto para hospedar sitios web, aplicaciones PHP, WordPress, Laravel y servicios web sin complicaciones.
 
 ## ✨ Novedades v3.0
@@ -362,3 +369,7 @@ Si este script te ayudó, ¡dale una estrella al repo! ⭐
 ---
 
 *Basado en el exitoso proyecto [proxmox-samba](https://github.com/MondoBoricua/proxmox-samba)*
+
+## ❤️ Support / Apoya
+
+Free and open source (MIT). If this script saved you time, [**become a patron**](https://www.patreon.com/MT3K) — patrons ($5+) get early access to new MT3K tools and a voice on what ships next. / Gratis y open source (MIT). Si este script te ahorró tiempo, [**hazte patron**](https://www.patreon.com/MT3K).
