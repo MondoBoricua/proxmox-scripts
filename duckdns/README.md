@@ -39,7 +39,7 @@ An automated script to configure DuckDNS in Proxmox LXC containers, perfect for 
 
 ```bash
 # Step 1: Download installer
-curl -sSL https://raw.githubusercontent.com/MondoBoricua/proxmox-duckdns/main/auto-install.sh | bash
+curl -sSL https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/duckdns/auto-install.sh | bash
 
 # Step 2: Run installer (copy and paste the command shown)
 bash /tmp/proxmox-auto-install.sh
@@ -49,7 +49,7 @@ bash /tmp/proxmox-auto-install.sh
 
 ```bash
 # From Proxmox host (SSH or console)
-wget https://raw.githubusercontent.com/MondoBoricua/proxmox-duckdns/main/proxmox-auto-install.sh
+wget https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/duckdns/proxmox-auto-install.sh
 chmod +x proxmox-auto-install.sh
 ./proxmox-auto-install.sh
 ```
@@ -160,7 +160,7 @@ Un script automatizado para configurar DuckDNS en contenedores LXC de Proxmox, p
 
 ```bash
 # Paso 1: Descargar el instalador
-curl -sSL https://raw.githubusercontent.com/MondoBoricua/proxmox-duckdns/main/auto-install.sh | bash
+curl -sSL https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/duckdns/auto-install.sh | bash
 
 # Paso 2: Ejecutar el instalador (copia y pega el comando que aparece)
 bash /tmp/proxmox-auto-install.sh
@@ -170,7 +170,7 @@ bash /tmp/proxmox-auto-install.sh
 
 ```bash
 # Desde el host Proxmox (SSH o consola)
-wget https://raw.githubusercontent.com/MondoBoricua/proxmox-duckdns/main/proxmox-auto-install.sh
+wget https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/duckdns/proxmox-auto-install.sh
 chmod +x proxmox-auto-install.sh
 ./proxmox-auto-install.sh
 ```

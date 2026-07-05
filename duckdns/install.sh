@@ -19,7 +19,7 @@ if ! command -v wget &> /dev/null && ! command -v curl &> /dev/null; then
 fi
 
 # URL del script principal
-SCRIPT_URL="https://raw.githubusercontent.com/MondoBoricua/proxmox-duckdns/main/duckdns.sh"
+SCRIPT_URL="https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/duckdns/duckdns.sh"
 
 echo "⬇️  Descargando instalador..."
 
