@@ -1,5 +1,12 @@
 # 🗂️ Samba Server for Proxmox LXC
 
+<p>
+  <img alt="Proxmox" src="https://img.shields.io/badge/Proxmox-VE_8.x_%2F_9.x-E57000?style=for-the-badge&logo=proxmox&logoColor=white">
+  <img alt="License" src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
+  <a href="https://www.patreon.com/MT3K"><img alt="Patreon" src="https://img.shields.io/badge/Patreon-Support_MT3K-FF424D?style=for-the-badge&logo=patreon"></a>
+</p>
+
+
 **[English](#english) | [Español](#español)**
 
 ---
@@ -695,3 +702,7 @@ Este proyecto esta bajo la Licencia MIT - ve el archivo LICENSE para mas detalle
 * [Official Samba Documentation / Documentacion oficial de Samba](https://www.samba.org/samba/docs/)
 * [Proxmox LXC Guide / Guia de Proxmox LXC](https://pve.proxmox.com/wiki/Linux_Container)
 * [Advanced SMB Configuration / Configuracion avanzada de SMB](https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server)
+
+## ❤️ Support / Apoya
+
+Free and open source (MIT). If this script saved you time, [**become a patron**](https://www.patreon.com/MT3K) — patrons ($5+) get early access to new MT3K tools and a voice on what ships next. / Gratis y open source (MIT). Si este script te ahorró tiempo, [**hazte patron**](https://www.patreon.com/MT3K).
