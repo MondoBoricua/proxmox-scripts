@@ -19,6 +19,7 @@ One-command LXC installers for your Proxmox homelab — run a single line on the
 | Script | What you get | Install (run on the Proxmox host) |
 |---|---|---|
 | [🦆 **duckdns/**](duckdns/) | Dynamic-DNS LXC — keeps your home IP updated on DuckDNS via cron. Interactive bilingual installer. | `curl -sSL https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/duckdns/auto-install.sh \| bash` |
+| [☁️ **cloudflare-ddns/**](cloudflare-ddns/) | Dynamic-DNS LXC for **your own domain** on Cloudflare — auto-resolves zone/record IDs via API and creates missing records. | `curl -fsSL https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/cloudflare-ddns/auto-install.sh \| bash` |
 | [🗂️ **samba/**](samba/) | Samba file-sharing LXC for your LAN. Auto-detects Ubuntu/Debian templates, guided setup. | `curl -sSL https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/samba/auto-install.sh \| bash` |
 | [🌐 **nginx/**](nginx/) | Nginx + PHP web-server LXC — PHP-FPM 8.1–8.3, Composer, php-manager, SSL manager, security headers. WordPress/Laravel ready. | `bash -c "$(wget -qO- https://raw.githubusercontent.com/MondoBoricua/proxmox-scripts/main/nginx/auto-install.sh)"` |
 
