@@ -25,6 +25,8 @@ Thumbs.db
 *.bak
 *.backup
 
-# Claude Code
+# Claude Code / agentes — notas privadas de trabajo, nunca al repo público
 claude.md
+CLAUDE.md
+AGENTS.md
 .claude/
